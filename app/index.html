@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Etsy Project</title>
     <link rel="stylesheet" href="css/app.css">
+    <!-- <meta http-equiv="refresh" content="0; url=dist/index.html" /> -->
   </head>
   <body>
     <header>
@@ -46,7 +47,8 @@
 
         </div><!--end of sidebar-->
         <div class="col-md-9 main-body"><!--body-->
-
+          <div class="img1"></div>
+          <div class="img1"></div>
           <!-- <div class="row"><!firstbodysection-->
             <!-- <div class="col-md-6 fbs2">
               <img src="img1.etsystatic.com" alt="img">
@@ -68,9 +70,9 @@
             <div class="col-md-4 fbs3">
               <img src="img1.etsystatic.com" alt="">
             </div>
-          </div> --> -->
+          </div> -->
 
-        <!-- </div><!end of body--> -->
+        <!-- </div><!end of body-->
 
 
       </div><!--end of row-->
@@ -78,17 +80,12 @@
     </div><!--end of container-->
 
 
+</div>
 
-
-    <script id="entry-template" type="text/x-handlebars-template">
-      <div class="main-body">
-        <img src={{img}} alt="">
+    <script id="image-template" type="text/x-handlebars-template">
+        <img src= {{img}} alt="">
         <p class="description"></p>
-
-      </div>
     </script>
-
-
     <script src="js/bundle.js"></script>
   </body>
 </html>
