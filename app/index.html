@@ -13,7 +13,7 @@
       <div class="header-content">
           <div class="header-top">
               <div class="nav1">
-                <h1>Etsy</h1>
+                <div id=title-img><img src="http://apifortress.com/wp-content/uploads/2015/08/etsy.jpg" alt="etsy-logo"></div>
                 <div class="form-group input">
                   <input type="email" class="form-control" id="email">
                 </div>
@@ -399,7 +399,7 @@
         </div><!--end of sidebar-->
         <div class="col-md-9 main-body"><!--body-->
 
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-md-6 img1"></div>
             <div class="col-md-6 img1"></div>
           </div>
@@ -476,18 +476,33 @@
           </div>
 
 
-        </div><!--end of main-body-->
-
       </div><!--end of row-->
+    </div>
     </div><!--end of container-->
 
-    <div class="footer">
+    <script id="category-template" type="text/x-handlebars-template">
+      <div class="row">
+        <div class="col-md-4">
+          <img src= {{image}} alt="">
+          <span class="description">{{title}}</span>
+          <span class="price">{{price}}</span>
+          <span class="make">{{manufacturer}}</span>
+        </div>
+        <div class="col-md-4">
+          <img src= {{image}} alt="">
+          <span class="description">{{title}}</span>
+          <span class="price">{{price}}</span>
+          <span class="make">{{manufacturer}}</span>
+        </div>
+        <div class="col-md-4">
+          <img src= {{image}} alt="">
+          <span class="description">{{title}}</span>
+          <span class="price">{{price}}</span>
+          <span class="make">{{manufacturer}}</span>
+        </div>
+      </div>
 
-    </div>
 
-    <script id="image-template" type="text/x-handlebars-template">
-        <img src= {{img}} alt="">
-        <p class="description"></p>
     </script>
     <script src="js/bundle.js"></script>
   </body>
