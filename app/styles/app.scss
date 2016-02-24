@@ -20,14 +20,20 @@ header {
 
   .header-content {
     border: 1px solid yellow;
-    width: 1020px;
+    // width: 1020px;
     margin: 0 auto;
     height: 100%;
   }
+  .header-top {
+
+    border-bottom: 1px solid gray;
+  }
   .header-bottom {
     margin-top: 2%;
+    margin-right: 130px;
+    margin-left: 130px;
     width: 100%;
-    word-spacing: 20px;
+    word-spacing: 21px;
     font-size: 18px;
     color: lightgray;
   }
@@ -49,12 +55,15 @@ header {
   .nav1 {
     display: inline-block;
     width: 500px;
+    margin-left: 130px;
 
   }
   .nav2 {
     display: inline-block;
     float: right;
     margin-top: 24px;
+    margin-right: 130px;
+
     .cart {
       border-color: none;
       border-radius: 0;
@@ -80,18 +89,91 @@ header {
     }
     .secondBlock {
       border: 1px solid black;
-      height: 534px;
+      height: 550px;
       width: 100%;
       .itemType {
         border-bottom: 1px solid gray;
+      }
+      .price-row {
+        padding-left: 15px;
+        border-bottom: 1px solid black;
       }
       .price {
         width: 63px;
         display: inline-block;
       }
+      .filter-Color {
+        border-bottom: 1px solid black;
+      }
+      .order-options {
+        border-bottom: 1px solid black;
+      }
+      .shop-location {
+        border-bottom: 1px solid black;
+
+      }
+      .colors {
+        .colorR{
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-color: red;
+          border-radius: 15%;
+        }
+        .colorO{
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-color: orange;
+          border-radius: 15%;
+        }
+        .colorY{
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-color: yellow;
+          border-radius: 15%;
+        }
+        .colorG{
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-color: green;
+          border-radius: 15%;
+        }
+        .colorLB{
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-color: lightblue;
+          border-radius: 15%;
+        }
+        .colorP{
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-color: purple;
+          border-radius: 15%;
+        }
+        .colorB{
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-color: black;
+          border-radius: 15%;
+        }
+        .colorW{
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-color: #FFF;
+          border: 1px solid black;
+          border-radius: 15%;
+        }
+      }
 
     }
-  }
+  }//end of sidebar
   .main-body {
     margin: 0;
     padding-left: 10px;
