@@ -15,31 +15,51 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 header {
   border: 1px solid black;
   width: 100%;
-  height: 180px;
+  height: 140px;
   background-color: teal;
 
   .header-content {
     border: 1px solid yellow;
     width: 1020px;
     margin: 0 auto;
+    height: 100%;
+  }
+  .header-bottom {
+    margin-top: 2%;
+    width: 100%;
+    word-spacing: 20px;
+    font-size: 18px;
+    color: lightgray;
   }
   h1{
     display: inline-block;
   }
+
   .input {
-    width: 50%;
+    width: 60%;
     display: inline-block;
+    position: relative;
+    top: -12px;
   }
   .search {
     display: inline-block;
+    position: relative;
+    top: -12px;
   }
   .nav1 {
     display: inline-block;
+    width: 500px;
+
   }
   .nav2 {
     display: inline-block;
     float: right;
-    border-top: 1px solid black;
+    margin-top: 24px;
+    .cart {
+      border-color: none;
+      border-radius: 0;
+
+    }
   }
 }
 .container {
@@ -62,6 +82,13 @@ header {
       border: 1px solid black;
       height: 534px;
       width: 100%;
+      .itemType {
+        border-bottom: 1px solid gray;
+      }
+      .price {
+        width: 63px;
+        display: inline-block;
+      }
 
     }
   }

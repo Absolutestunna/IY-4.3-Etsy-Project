@@ -22,23 +22,22 @@
               <div class="nav2">
                   <span>Sell on Etsy</span>
                   <span>Register</span>
-                  <span>SignIn btn</span>
-                  <span>Cart</span>
+                  <span><button>SignIn</button></span>
+                  <span class="glyphicon glyphicon-shopping-cart cart">Cart</span>
               </div><!--end of nav-->
 
           </div><!--end of header-top-->
-
+          <div class="header-bottom">
+            <span>Clothing&#38;Accessories</span>
+            <span>Jewelry</span>
+            <span>Craft Supplies&#38;Tools</span>
+            <span>Entertainment</span>
+            <span>Home&#38;Living</span>
+            <span>Kids&#38;Baby</span>
+            <span>Vintage</span>
+          </div>
         </div><!--end of header-content-->
-        <div class="header-bottom">
-          <span>Space</span>
-          <span>Space</span>
-          <span>Space</span>
-          <span>Space</span>
-          <span>Space</span>
-          <span>Space</span>
-          <span>Space</span>
-          <span>Space</span>
-        </div>
+
     </header>
 
     <div class="container">
@@ -46,7 +45,7 @@
         <div class="col-md-3 sidebar"><!--sidebar-->
           <div class="row">
             <div class="col-md-12 firstBlock">
-              <h2>Search resultes for: </h2>
+              <div><h2>Search resultes for: </h2></div>
               <h3>All Categories: </h3>
               <ul>
                 <li>Shoes</li>
@@ -65,8 +64,45 @@
                 <li>Shoes</li>
                 <li>Shoes</li>
               </ul>
-            </div><!--first block-->
-            <div class="col-md-12 secondBlock"></div><!--second block-->
+            </div><!--end of first block-->
+            <div class="col-md-12 secondBlock">
+              <div class="itemType">
+                <div><h2>Refine your search </h2></div>
+                  <span>Item Type</span>
+                <div class="radio">
+                  <label><input type="radio" name="optradio">All Items</label>
+                </div>
+                <div class="radio">
+                  <label><input type="radio" name="optradio">Handmade</label>
+                </div>
+                <div class="radio disabled">
+                  <label><input type="radio" name="optradio" disabled>Vintage</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <span>Price($)</span>
+                </div>
+                  <div class="row">
+                      <div class="col-md-5">
+                        <div class="form-group form">
+                          <input type="text" class="form-control price" id="usr">
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <span>to</span>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="form-group form">
+                          <input type="text" class="form-control price" id="usr">
+                        </div>
+                      </div>
+                    </div>
+                
+              </div>
+
+            </div><!--second block-->
 
           </div>
 
@@ -156,7 +192,7 @@
     </div><!--end of container-->
 
     <div class="footer">
-      
+
     </div>
 
     <script id="image-template" type="text/x-handlebars-template">
