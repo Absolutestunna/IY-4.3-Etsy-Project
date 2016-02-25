@@ -399,16 +399,12 @@
         </div><!--end of sidebar-->
         <div class="col-md-9 main-body"><!--body-->
 
+          <div class="row category-list">
+          </div>
+
+
+
           <!-- <div class="row">
-            <div class="col-md-6 img1"></div>
-            <div class="col-md-6 img1"></div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 img2"></div>
-            <div class="col-md-4 img2"></div>
-            <div class="col-md-4 img2"></div>
-          </div>
-          <div class="row">
             <div class="col-md-12">
               <span class="categories">All categories</span>
               <span></span>
@@ -420,46 +416,17 @@
                 <span class="glyphicon glyphicon-triangle-bottom"></span>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="row">
-            <div class="col-md-4 img2"></div>
-            <div class="col-md-4 img2"></div>
-            <div class="col-md-4 img2"></div>
-          </div>
 
-          <div class="row">
-            <div class="col-md-4 img2"></div>
-            <div class="col-md-4 img2"></div>
-            <div class="col-md-4 img2"></div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4 img2"></div>
-            <div class="col-md-4 img2"></div>
-            <div class="col-md-4 img2"></div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4 img2"></div>
-            <div class="col-md-4 img2"></div>
-            <div class="col-md-4 img2"></div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4 img2"></div>
-            <div class="col-md-4 img2"></div>
-            <div class="col-md-4 img2"></div>
-          </div>
-
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-md-12">
               <span>Related to: </span>
               <span class="searchResult">"yarn"</span>
             </div>
-          </div>
+          </div> -->
 
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-md-12">
               <nav>
                 <ul class="pagination">
@@ -473,36 +440,32 @@
                 </ul>
               </nav>
             </div>
-          </div>
+          </div> -->
 
 
       </div><!--end of row-->
-    </div>
+          </div>
+        </div>
     </div><!--end of container-->
 
-    <script id="category-template" type="text/x-handlebars-template">
-      <div class="row">
-        <div class="col-md-4">
-          <img src= {{image}} alt="">
-          <span class="description">{{title}}</span>
-          <span class="price">{{price}}</span>
-          <span class="make">{{manufacturer}}</span>
-        </div>
-        <div class="col-md-4">
-          <img src= {{image}} alt="">
-          <span class="description">{{title}}</span>
-          <span class="price">{{price}}</span>
-          <span class="make">{{manufacturer}}</span>
-        </div>
-        <div class="col-md-4">
-          <img src= {{image}} alt="">
-          <span class="description">{{title}}</span>
-          <span class="price">{{price}}</span>
-          <span class="make">{{manufacturer}}</span>
-        </div>
+
+    <script id="special-cat-template" type="text/x-handlebars-template">
+      <div class="col-md-4 specialCat-img">
+        <img  src= {{image}} alt="">
+
       </div>
+    </script>
+    <script id="category-template" type="text/x-handlebars-template">
+      <!-- <div class="row"> -->
+        <div class="col-md-4 cat-img">
+          <img src= {{image}} alt="">
+          <p class="description">{{title}}</p>
+          <p class="price">{{price}}</p>
+          <p class="make">{{manufacturer}}</p>
+        </div>
 
 
+      <!-- </div> -->
     </script>
     <script src="js/bundle.js"></script>
   </body>

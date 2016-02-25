@@ -1,8 +1,15 @@
 var $ = require("jquery");
 var handlebars = require('handlebars');
+var image;
+var price;
+var title;
+var currency_code;
+var manufacturer;
+var cat;
+var q = "tacos";
 
 
-var url = "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=soccer&includes=Images,Shop";
+var url = "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords="+q+"&includes=Images,Shop";
 
 function fetchJSONP(url, callback) {
     var callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random());
@@ -25,13 +32,14 @@ function logData(data){
     console.log(arrayData)
     arrayData.forEach(function(value, index, thisArray){
       var context = {
+        // cat: thisArray[index].category_path[0],
         image: thisArray[index].Images[0].url_fullxfull,
         price: thisArray[index].price,
         title: thisArray[index].title,
         currency_code: thisArray[index].currency_code,
         manufacturer: thisArray[index].Shop.shop_name,
       }
-      $(".main-body").append(template(context));
+      $(".category-list").append(template(context));
     });
 }
 fetchJSONP(url, logData);
