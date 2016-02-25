@@ -103,20 +103,20 @@ header {
 .container {
   width: 1020px;
   margin: 0 auto;
-  height: 100%;
-  border: 1px solid red;
+  height: 300px;
 
 
   .sidebar {
-    border: 1px solid green;
     height: 100%;
     background-color: #FFF;
 
     .firstBlock {
       height: 516px;
       width: 100%;
+    .results-body {
       border: 0.5px solid #BFC2C2;
 
+    }
       .search-Result {
         background-color: #F2F2EC;
         h2 {
@@ -145,29 +145,56 @@ header {
       }
 
     }
+    .itemType {
+       background-color: #F2F2EC;
+
+        h2 {
+        font-size: 15px;
+
+        }
+    }
     .secondBlock {
-      border: 1px solid black;
-      height: 550px;
+      height: 650px;
       width: 100%;
-      .itemType {
-        border-bottom: 1px solid gray;
+      border: 0.5px solid #BFC2C2;
+
+
+      .type {
+        border-bottom: 0.5px solid #BFC2C2;
+        margin-top: 11px;
       }
       .price-row {
-        padding-left: 15px;
-        border-bottom: 1px solid black;
+        padding-top: 15px;
+        // padding-left: 15px;
+        border-bottom: 0.5px solid #BFC2C2;
+        span {
+          display: inline-block;
+          margin-bottom: 10px;
+        }
       }
       .price {
         width: 63px;
         display: inline-block;
       }
       .filter-Color {
-        border-bottom: 1px solid black;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 0.5px solid #BFC2C2;
+        .filter {
+          display: inline-block;
+          margin-top: 10px;
+          padding-bottom: 20px;
+        }
       }
       .order-options {
-        border-bottom: 1px solid black;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid 0.5px solid #BFC2C2;
       }
       .shop-location {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid 0.5px solid #BFC2C2;
+        padding-left: 15px;
+        margin-bottom: 12px;
 
       }
       .colors {
@@ -254,9 +281,9 @@ header {
   // width: 40px;
   white-space: nowrap;
   overflow: hidden;
-  height: 235px;
+  height: 269px;
   border-radius: 5%;
-  border: 1px solid black;
+  // border: 1px solid black;
   border-color: none;
   // width: 31%;
   img {
