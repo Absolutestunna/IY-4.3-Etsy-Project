@@ -421,14 +421,13 @@
 
         </div><!--end of sidebar-->
         <div class="col-md-9 main-body"><!--body-->
-
+          <div class="topSearch">Top Searches for "yarn"</div>
           <div class="row category-list">
           </div>
 
+        </div><!--end of main-body-->
 
-      </div><!--end of row-->
-          </div>
-        </div>
+    </div><!--end of row-->
     </div><!--end of container-->
 
 
@@ -440,13 +439,15 @@
     </script>
     <script id="category-template" type="text/x-handlebars-template">
       <!-- <div class="row"> -->
+
         <div class="col-md-4 cat-img">
           <img src= {{image}} alt="">
-          <p class="description">{{title}}</p>
-          <p class="price">{{price}}</p>
-          <p class="make">{{manufacturer}}</p>
+          <div class="text">
+            <p class="description">{{title}}</p>
+            <p class="price">{{price}} {{currency_code}}</p>
+            <p class="make">{{manufacturer}}</p>
+          </div>
         </div>
-
 
       <!-- </div> -->
     </script>

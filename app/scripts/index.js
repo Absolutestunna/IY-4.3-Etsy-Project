@@ -1,9 +1,6 @@
 var $ = require("jquery");
 var handlebars = require('handlebars');
 
-
-// $(".search").on('click', fetchJSONP());
-
     var image;
     var price;
     var title;
@@ -11,39 +8,51 @@ var handlebars = require('handlebars');
     var manufacturer;
     var cat;
     var q = "tacos";
+    var url_key = "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=";
+    var url;
 
-    var url = "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords="+q+"&includes=Images,Shop";
+    $( ".search" ).on("click", function() {
+      $(".category-list").empty();
 
-    function fetchJSONP(url, callback) {
-        var callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random());
-        var script = document.createElement('script');
+      q = $("#search").val();
+      startProgram();
 
-        window[callbackName] = function(data) {
-            delete window[callbackName];
-            document.body.removeChild(script);
-            callback(data);
-        };
+    });
 
-        script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
-        document.body.appendChild(script);
-    }
-    var source   = $("#category-template").html();
-    var template = handlebars.compile(source);
+    startProgram();
+    function startProgram(){
 
-    function logData(data){
-        var arrayData = data.results;
-        console.log(arrayData)
-        arrayData.forEach(function(value, index, thisArray){
-          var context = {
-            // cat: thisArray[index].category_path[0],
-            image: thisArray[index].Images[0].url_fullxfull,
-            price: thisArray[index].price,
-            title: thisArray[index].title,
-            currency_code: thisArray[index].currency_code,
-            manufacturer: thisArray[index].Shop.shop_name,
-          }
-          $(".category-list").append(template(context));
-        });
+      url = url_key+q+"&includes=Images,Shop";
+      function fetchJSONP(url, callback) {
+          var callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random());
+          var script = document.createElement('script');
+          window[callbackName] = function(data) {
+              delete window[callbackName];
+              document.body.removeChild(script);
+              callback(data);
+          };
+          script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
+          document.body.appendChild(script);
+      }
+      var source   = $("#category-template").html();
+      var template = handlebars.compile(source);
 
-    }
-    fetchJSONP(url, logData);
+      function logData(data){
+
+          var arrayData = data.results;
+          arrayData.forEach(function(value, index, thisArray){
+            var context = {
+              // cat: thisArray[index].category_path[0],
+              image: thisArray[index].Images[0].url_fullxfull,
+              price: thisArray[index].price,
+              title: thisArray[index].title,
+              currency_code: thisArray[index].currency_code,
+              manufacturer: thisArray[index].Shop.shop_name,
+            }
+            console.log(context)
+
+            $(".category-list").append(template(context));
+          });
+      }
+      fetchJSONP(url, logData);
+}
